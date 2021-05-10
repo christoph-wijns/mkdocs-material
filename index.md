@@ -1,37 +1,114 @@
-## Welcome to GitHuuuub Pages
+# Project information
+site_name: Minimal Workshop
+site_url: https://stevemar.github.io/minimal-workshop-mkdocs
+site_author: IBM Developer
 
-You can use the [editor on GitHub](https://github.com/christoph-wijns/mkdocs-material/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+# Repository
+repo_name: mkdocs-material
+repo_url: https://github.com/christoph-wijns/mkdocs-material
+# Change the middle parameter to the default branch, "master" or "main"
+edit_uri: edit/master/docs
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+# Navigation
+nav:
+  - Welcome:
+    - About the workshop: index.md
+    - Compatability: welcome/compatability.md
+    - Authors: welcome/authors.md
+  - Get started:
+    - Prerequisites: get-started/prereqs.md
+    - The environment: get-started/environment.md
+    - About the data set: get-started/data-set.md
+    - Feedback survey: get-started/survey.md
+  - Workshop:
+    - Lab 1: workshop/lab-1.md
+    - Lab 2: workshop/lab-2.md
+    - Lab 3: workshop/lab-3.md
+  - Reference:
+    - Additional resources: reference/resources.md
+    - Admin guide: reference/admin-guide.md
+    - Mkdocs examples: reference/mkdocs.md
+  - Changelog:
+    - Release notes: changelog.md
 
-### Markdown
+## DO NOT CHANGE BELOW THIS LINE
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+# Copyright
+copyright: Copyright &copy; 2020 IBM Developer
 
-```markdown
-Syntax highlighted code block
+# Theme
+theme:
+  name: material
+  font:
+    text: IBM Plex Sans
+    code: IBM Plex Mono
+  # Choose between specifying a file with "logo"
+  # or using a built-in one with "icon"
+  #logo: assets/bee.png
+  icon:
+    logo: material/library
+  features:
+    #- navigation.tabs
+    - navigation.instant
+    - navigation.expand
+  palette:
+    scheme: default
+    primary: blue
+    accent: blue
 
-# Header 1
-## Header 2
-### Header 3
+# Plugins
+plugins:
+  - search
 
-- Bulleted
-- List
+# Customization
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/ibm
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/ibmdeveloper
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/ibm/
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/user/developerworks
+    - icon: fontawesome/brands/dev
+      link: https://dev.to/ibmdeveloper
+  version:
+    provider: mike
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/christoph-wijns/mkdocs-material/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+# Extensions
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
